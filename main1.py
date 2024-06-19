@@ -13,6 +13,5 @@ env = DummyVecEnv([lambda: env])
 model = PPO('MlpPolicy', env, verbose=1, tensorboard_log=log_path)
 model.save(PPO_Path)
 
-model.learn(total_timesteps=20000)  
+model.learn(total_timesteps=100000)  
 
-#model = PPO.load(PPO_Path, env=env)
